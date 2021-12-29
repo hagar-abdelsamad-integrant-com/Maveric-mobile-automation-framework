@@ -1,0 +1,50 @@
+plugins {
+    id "net.ltgt.apt" version "0.10"
+    id 'java'
+    id 'eclipse'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+repositories {
+
+    jcenter()
+    mavenCentral()
+    google()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+dependencies {
+    compile group: 'org.apache.httpcomponents', name: 'httpcomponents-core', version: '4.3.2'
+    compile group: 'org.apache.httpcomponents', name: 'httpcomponents-client', version: '4.5.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.0'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile 'info.cukes:cucumber-java:1.2.4', 'info.cukes:cucumber-junit:1.2.4'
+    compile 'io.appium:java-client:4.0.0'
+    compile group: 'io.appium', name: 'java-client', version: '5.0.4'
+    compile 'log4j:log4j:1.2.17'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+}
+jar {
+    manifest.attributes(
+            'Built-By': System.getProperty('user.name'),
+            'Built-JDK': System.getProperty('java.version'),
+            'Built-OS': System.getProperty('os.name'),
+            'Built-Date': new Date(),
+            'Main-Class': 'Runner'
+
+    )
+}
+eclipse {
+    classpath {
+        downloadSources = true
+    }
+}
+
+
+
+
+
+

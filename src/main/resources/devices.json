@@ -1,0 +1,23 @@
+{
+  "ios": [
+    {
+      "name": "iPhone 13",
+      "os_version": "15.0",
+      "model": "iPhone 13",
+      "udid": "00008110-001524510E38801E",
+      "app": "//Users/hagar.abdelsamad/Downloads/JUMIA Online Shopping_v8.0_apkpure.com.ipa"
+    }
+  ],
+  "android": [
+    {
+      "name": "Redmi",
+      "os_version": "9 PPR1.180610.011",
+      "model": "Redmi Note 8 Pro",
+      "udid": "aql7t8ukyhww6hnn",
+      "app": "/Users/hagar.abdelsamad/Downloads/JUMIA Online Shopping_v8.0_apkpure.com.xapk"
+    }
+  ],
+  "appium_server": [
+    "http://127.0.0.1:4723/wd/hub"
+  ]
+}
